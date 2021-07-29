@@ -1,0 +1,395 @@
+/* 
+===
+App
+===
+ */
+
+/* 
+------
+Colors
+------
+ */
+:root{
+  --aqua:#18FFFF;
+  --green:#00FFBA;
+  --red:#FF7676;
+  --white:#FFFFFF;
+  --black:#212121;
+  --black-light:#484848;
+}
+
+/* 
+-------
+General
+-------
+ */
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image:url(../src/Assets/Background.jpg), linear-gradient(to right,var(--aqua),var(--green));
+  background-blend-mode:multiply;
+  background-attachment: fixed;
+  color: var(--white);
+  font-size: 40px;
+}
+
+.container{
+  max-width: 105rem;
+  padding: 0;
+}
+
+.container *{
+  border: none;
+  border-radius: 30px;
+}
+
+h1{
+  font-family: "Roboto-slab";
+  font-size:80px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+.heading{
+  position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading::after{
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  width: 15rem;
+  margin-left: -7.5rem;
+  height: 2rem;
+  background-color: var(--aqua);
+  border-radius: 2rem;
+}
+
+section{
+  margin-bottom: 5rem;
+}
+
+/* 
+======
+Navbar
+======
+ */
+.navbar{
+  background:var(--black);
+  display: flex;
+  align-items:baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.navbar span{
+  color: var(--aqua);
+  font-size: 85px;
+}
+
+.navbar-items{
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar-items a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+ /* 
+=======
+Landing
+=======
+ */
+.landing{
+  margin-top: 12rem;
+}
+
+.landing *{
+  margin-bottom: 5rem;
+}
+
+.landing-card{
+  position: relative;
+  width: 100%;
+  height:20rem;
+  overflow: hidden;
+}
+
+.landing-card img{
+  position: absolute;
+  width: 100%;
+  top: -75rem;
+}
+
+.landing p{
+  text-align: center;
+}
+
+.slider{
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  margin: 5rem auto;
+  animation: move 1.5s ease-in-out infinite alternate;
+}
+
+/* 
+----------------
+slider-Animation
+----------------
+ */
+@keyframes move {
+ from {
+     transform: translateY(-5rem);
+ }
+ to {
+     transform: translateY(5rem);
+ }
+}
+
+.landing-paragraph{
+  background:var(--black);
+  padding:3rem;
+  text-align: justify;
+}
+
+.landing-paragraph p{
+  margin:auto;
+}
+
+ /* 
+=====
+Books
+=====
+ */
+.loading{
+  font-family: "Roboto-Slab";
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.books-grid{
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+}
+
+/* 
+====
+Book
+====
+*/
+.book{
+  width: 17rem;
+  height: fit-content;
+  margin: 3rem auto;
+  background-color: var(--black);
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.book:hover{
+  filter:invert(1) hue-rotate(180deg);
+}
+
+.book h2{
+  color: var(--aqua);
+}
+
+.descriptions{
+  background-color: var(--black-light);
+}
+
+ /* 
+====
+Form
+====
+ */
+.form-area{
+  background-color: var(--black);
+  width: fit-content;
+  margin:0 auto;
+  padding: 3rem;
+}
+
+.form-area *{
+  font-size: 40px;
+  background-color: var(--black-light);
+  text-align: center;
+}
+
+.form-area input{
+  color: var(--aqua);
+  margin:2rem 0;
+}
+
+.form-area input:focus{
+  color: var(--red);
+}
+
+.btn-neon{
+  background: none;
+  color: var(--aqua);
+  width: 100%;
+  padding: 2rem;
+  border: 5px solid var(--aqua);
+  border-radius: 1rem;
+}
+
+.btn-neon:hover{
+  color: var(--red);
+  border-color:var(--red);
+}
+ /* 
+=======
+Contact
+=======
+ */
+.contact-info{
+  background-color: var(--black);
+  color: var(--aqua);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 3rem;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contact-info h2{
+  color: var(--white);
+}
+
+.contact-info ul{
+  list-style: none;
+  text-align: justify;
+}
+
+ 
+ /* 
+======
+Footer
+======
+ */
+.footer{
+  background-color: var(--black);
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.footer img{
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* 
+=====================
+Responsive Web Design
+=====================
+ */
+@media (max-width:1143px) {
+/* 
+----------------------
+General Responsiveness
+----------------------
+ */
+  .landing-card{
+    position: static;
+  }
+  
+  .landing-card img{
+    position: static;
+  }
+}
+
+/* 
+------------------------
+Tablet Screens And Under
+------------------------
+ */
+@media (max-width:956px) {
+  .footer img{
+    margin-top: 1rem;
+    width: 6rem;
+  }
+}
+
+/* 
+-------------------------------
+Medium Tablet Screens And Under
+-------------------------------
+ */
+ @media (max-width:767px) {
+  body{
+    font-size: 20px;
+  }
+  
+  h1{
+    font-size:40px;
+  }
+  
+  h2{
+    font-size: 20px;
+  }
+  .book{
+    font-size: 10px;
+  }
+
+  .navbar span{
+    color: var(--aqua);
+    font-size: 45px;
+  }
+  
+  .form-area *{
+    font-size: 20px;
+  }
+  .footer img{
+    margin-top: 2rem;
+    width: 3rem;
+  }
+}
+
+/* 
+----------------------
+General Responsiveness
+----------------------
+ */
+ @media (max-width:544px) {
+  .books-grid{
+    grid-template-columns: repeat(auto-fit,minmax(11rem,auto));
+  }
+
+  .book{
+    width: 11rem;
+  }
+}
+
+/* 
+-------------
+Phone Screens
+-------------
+ */
+ @media (max-width:479px) {
+  .slider{
+    display: none;
+  }
+
+  .footer img{
+    margin-top: 3rem;
+    width: 2rem;
+  }
+}

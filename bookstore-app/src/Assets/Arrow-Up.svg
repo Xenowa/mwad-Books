@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129">
+  <g id="Arrow-Up" transform="translate(-1446 -4587)">
+    <g id="Rectangle_24" data-name="Rectangle 24" transform="translate(1446 4587)" fill="none" stroke="#18ffff" stroke-width="5">
+      <rect width="129" height="129" stroke="none"/>
+      <rect x="2.5" y="2.5" width="124" height="124" fill="none"/>
+    </g>
+    <path id="Icon_awesome-arrow-up" data-name="Icon awesome-arrow-up" d="M5.636,48.377,1.66,44.4a4.281,4.281,0,0,1,0-6.072l34.8-34.82a4.281,4.281,0,0,1,6.072,0l34.8,34.8a4.281,4.281,0,0,1,0,6.072l-3.976,3.976a4.3,4.3,0,0,1-6.144-.072L46.671,26.722V78.2a4.288,4.288,0,0,1-4.3,4.3H36.641a4.288,4.288,0,0,1-4.3-4.3V26.722L11.78,48.305a4.273,4.273,0,0,1-6.144.072Z" transform="translate(1471.002 4609.128)" fill="#18ffff"/>
+  </g>
+</svg>
