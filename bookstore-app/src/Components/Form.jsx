@@ -40,6 +40,10 @@ function Add() {
           Price: price
         });
       alert("Your Form Has Been Submitted");
+      setBookName("");
+      setauthorName("");
+      setPrice("");
+      setIsbn("");
     }else{
       alert("invalid Username or Password");
     }
